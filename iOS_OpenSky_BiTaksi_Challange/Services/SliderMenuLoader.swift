@@ -22,7 +22,6 @@ class SlideMenuLoader: NSObject {
         
         print("screen : \(screen)")
         print("UIScreen.main.bounds : \(UIScreen.main.bounds)")
-        print("self.superview : \(inputView.superview)")
         
         addShadowView(inputFrame: screen, inputView: inputView)
         addSlideMenuView(inputFrame: screen, inputView: inputView)

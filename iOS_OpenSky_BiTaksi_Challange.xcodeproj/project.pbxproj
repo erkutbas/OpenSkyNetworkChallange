@@ -36,7 +36,6 @@
 		A74E0F9922A36A4600D80C91 /* PlaneAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9022A36A4600D80C91 /* PlaneAnnotationView.swift */; };
 		A74E0F9A22A36A4600D80C91 /* RefreshingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9122A36A4600D80C91 /* RefreshingView.swift */; };
 		A74E0F9B22A36A4600D80C91 /* PlaneClusterAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9222A36A4600D80C91 /* PlaneClusterAnnotation.swift */; };
-		A74E0F9C22A36A4600D80C91 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9322A36A4600D80C91 /* MapView.swift */; };
 		A74E0F9D22A36A4600D80C91 /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9422A36A4600D80C91 /* SlideMenu.swift */; };
 		A74E0F9F22A36A4600D80C91 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9722A36A4600D80C91 /* PermissionViewController.swift */; };
 		A74E0FA422A36A5900D80C91 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0FA122A36A5900D80C91 /* MapViewModel.swift */; };
@@ -91,7 +90,6 @@
 		A74E0F9022A36A4600D80C91 /* PlaneAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaneAnnotationView.swift; sourceTree = "<group>"; };
 		A74E0F9122A36A4600D80C91 /* RefreshingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshingView.swift; sourceTree = "<group>"; };
 		A74E0F9222A36A4600D80C91 /* PlaneClusterAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaneClusterAnnotation.swift; sourceTree = "<group>"; };
-		A74E0F9322A36A4600D80C91 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A74E0F9422A36A4600D80C91 /* SlideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
 		A74E0F9722A36A4600D80C91 /* PermissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
 		A74E0FA122A36A5900D80C91 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
@@ -251,7 +249,6 @@
 				A74E0F9022A36A4600D80C91 /* PlaneAnnotationView.swift */,
 				A74E0F9122A36A4600D80C91 /* RefreshingView.swift */,
 				A74E0F9222A36A4600D80C91 /* PlaneClusterAnnotation.swift */,
-				A74E0F9322A36A4600D80C91 /* MapView.swift */,
 				A74E0F9422A36A4600D80C91 /* SlideMenu.swift */,
 				A79A770122A3F5A100A17237 /* ErrorView.swift */,
 			);
@@ -424,7 +421,6 @@
 				A74E0F8122A369DD00D80C91 /* Structs.swift in Sources */,
 				A74E0F9D22A36A4600D80C91 /* SlideMenu.swift in Sources */,
 				A74E0F7422A3694900D80C91 /* PermissionManager.swift in Sources */,
-				A74E0F9C22A36A4600D80C91 /* MapView.swift in Sources */,
 				A74E0F9822A36A4600D80C91 /* PermissionButtonView.swift in Sources */,
 				A79A76FE22A3F3B000A17237 /* AlertViewManager.swift in Sources */,
 				A74E0F8B22A36A2A00D80C91 /* StateData.swift in Sources */,

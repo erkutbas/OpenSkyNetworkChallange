@@ -235,9 +235,9 @@ extension SimulationViewController: MKMapViewDelegate {
         return annotationView
     }
     
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer! {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MKPolyline {
-            var polylineRenderer = MKPolylineRenderer(overlay: overlay)
+            let polylineRenderer = MKPolylineRenderer(overlay: overlay)
             polylineRenderer.strokeColor = #colorLiteral(red: 1, green: 0.3098039216, blue: 0.6039215686, alpha: 1)
             polylineRenderer.lineWidth = 2
             polylineRenderer.lineCap = .round
@@ -245,7 +245,7 @@ extension SimulationViewController: MKMapViewDelegate {
             return polylineRenderer
         }
 
-        return nil
+        return MKOverlayRenderer()
     }
     
 }

@@ -24,9 +24,6 @@ class SimulationViewModel {
         guard let paths = simulationData.paths else { return nil }
         guard let firstPath = paths.first else { return nil }
         
-        print("simulationData.simulationSeconds : \(simulationData.simulationSeconds)")
-        print("simulationData.paths : \(simulationData.paths?.count)")
-        
         return firstPath
     }
     
