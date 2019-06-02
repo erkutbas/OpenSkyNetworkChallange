@@ -27,3 +27,7 @@ protocol CommonPlaceData {}
 protocol CommonViewModel {
     func handleGenericResponse<T: Codable>(response: Result<T, Error>)
 }
+
+protocol CenterTemplateProtocols {
+    func takasi() 
+}

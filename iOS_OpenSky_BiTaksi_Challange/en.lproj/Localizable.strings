@@ -15,3 +15,11 @@
 
 "filterOptions" = "Filter Options";
 "detailedFilterOptions" = "You can choose country.";
+
+"startTime" = "Başlangıç";
+"endTime" = "Başlangıç";
+"simulatorSpeed" = "Simulator Hızı";
+"icao24Info" = "Icao24 Bilgisi";
+"cancelPrompt" = "Cancel";
+"simulatePrompt" = "Başla";
+"finishPrompt" = "Bitir";

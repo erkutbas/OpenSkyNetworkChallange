@@ -172,7 +172,6 @@ extension MapViewController2 {
     
     private func arrangeMapZoomRateAfterLoaded() {
         LocationManager.shared.getCurrentLocationData { (location) in
-            
             self.mapView.setRegion(MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: CONSTANT.MAP_KIT_CONSTANT.ZOOM_DEGREE_0_025, longitudeDelta: CONSTANT.MAP_KIT_CONSTANT.ZOOM_DEGREE_0_025)), animated: true)
             
         }

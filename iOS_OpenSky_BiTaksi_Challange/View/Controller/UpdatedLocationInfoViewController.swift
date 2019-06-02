@@ -8,33 +8,45 @@
 
 import UIKit
 
-class UpdatedLocationInfoViewController: BaseViewController {
+class UpdatedLocationInfoViewController: CenterTemplateViewControler {
     
-    lazy var centerViewContainer: UIView = {
-        let temp = UIView()
-        temp.translatesAutoresizingMaskIntoConstraints = false
-        temp.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        temp.layer.cornerRadius = 15
-        temp.layer.shadowColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        temp.layer.shadowOffset = .zero
-        temp.layer.shadowOpacity = 1;
-        temp.layer.shadowRadius = 5;
-        return temp
-    }()
-
     convenience init(pathStructData: PathStruct){
         self.init()
+        print("pathStructData : \(pathStructData)")
+        for item in pathStructData.pathData! {
+            print("item.latitude : \(item.latitude)")
+            print("item.latitude : \(item.latitude)")
+        }
     }
     
     override func prepareViewConfigurations() {
+        print("KOKO1")
+        super.prepareViewConfigurations()
+        viewSettings()
         
     }
     
+    override func configureSliderOptions() {
+        print("KOKO2")
+    }
+    
+    override func configureStackViewPrompts() {
+        
+    }
+    
+    override func configurationOfOperationButtons() {
+        
+    }
     
 }
 
 // MARK: - major functions
 extension UpdatedLocationInfoViewController {
+    
+    private func viewSettings() {
+        self.view.backgroundColor = #colorLiteral(red: 0.1647058824, green: 0.1803921569, blue: 0.262745098, alpha: 1).withAlphaComponent(0.4)
+    }
+    
     
 }
 

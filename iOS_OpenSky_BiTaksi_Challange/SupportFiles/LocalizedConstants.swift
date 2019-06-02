@@ -22,4 +22,15 @@ struct LocalizedConstants {
         static let filterOptions = NSLocalizedString("filterOptions", comment: "")
         static let detailedFilterOptions = NSLocalizedString("detailedFilterOptions", comment: "")
     }
+    
+    struct TitlePrompts {
+        static let startTime = NSLocalizedString("startTime", comment: "")
+        static let endTime = NSLocalizedString("endTime", comment: "")
+        static let simulatorSpeed = NSLocalizedString("simulatorSpeed", comment: "")
+        static let icao24Info = NSLocalizedString("icao24Info", comment: "")
+        static let cancelPrompt = NSLocalizedString("cancelPrompt", comment: "")
+        static let simulatePrompt = NSLocalizedString("simulatePrompt", comment: "")
+        static let finishPrompt = NSLocalizedString("finishPrompt", comment: "")
+        
+    }
 }
