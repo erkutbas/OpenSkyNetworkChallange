@@ -49,6 +49,8 @@
 		A79A76F322A38B6F00A17237 /* UpdatedLocationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A76F222A38B6F00A17237 /* UpdatedLocationInfoViewController.swift */; };
 		A79A76F622A3919400A17237 /* illustration.png in Resources */ = {isa = PBXBuildFile; fileRef = A79A76F422A3919400A17237 /* illustration.png */; };
 		A79A76F722A3919400A17237 /* dots.png in Resources */ = {isa = PBXBuildFile; fileRef = A79A76F522A3919400A17237 /* dots.png */; };
+		A79A76F922A3BA1000A17237 /* SimulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A76F822A3BA1000A17237 /* SimulationViewController.swift */; };
+		A79A76FC22A3C1A000A17237 /* SimulationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A76FB22A3C1A000A17237 /* SimulationViewModel.swift */; };
 		E5B4AD9DFDFE247755CE4F06 /* Pods_iOS_OpenSky_BiTaksi_Challange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBF96983721E0B5BA520BB6 /* Pods_iOS_OpenSky_BiTaksi_Challange.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +103,8 @@
 		A79A76F222A38B6F00A17237 /* UpdatedLocationInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatedLocationInfoViewController.swift; sourceTree = "<group>"; };
 		A79A76F422A3919400A17237 /* illustration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = illustration.png; sourceTree = "<group>"; };
 		A79A76F522A3919400A17237 /* dots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dots.png; sourceTree = "<group>"; };
+		A79A76F822A3BA1000A17237 /* SimulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationViewController.swift; sourceTree = "<group>"; };
+		A79A76FB22A3C1A000A17237 /* SimulationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationViewModel.swift; sourceTree = "<group>"; };
 		B20137907D098718C445E3F1 /* Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_OpenSky_BiTaksi_Challange/Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,6 +255,7 @@
 				A74E0F9722A36A4600D80C91 /* PermissionViewController.swift */,
 				A79A76E622A370CA00A17237 /* MapViewController2.swift */,
 				A79A76F222A38B6F00A17237 /* UpdatedLocationInfoViewController.swift */,
+				A79A76F822A3BA1000A17237 /* SimulationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,6 +266,7 @@
 				A74E0FA122A36A5900D80C91 /* MapViewModel.swift */,
 				A74E0FA222A36A5900D80C91 /* MapViewControllerViewModel.swift */,
 				A74E0FA322A36A5900D80C91 /* SlideMenuViewModel.swift */,
+				A79A76FB22A3C1A000A17237 /* SimulationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -400,6 +406,7 @@
 				A74E0FA522A36A5900D80C91 /* MapViewControllerViewModel.swift in Sources */,
 				A74E0F8C22A36A2A00D80C91 /* OpenSkyNetworkData.swift in Sources */,
 				A74E0F7D22A369C200D80C91 /* Base.swift in Sources */,
+				A79A76FC22A3C1A000A17237 /* SimulationViewModel.swift in Sources */,
 				A74E0F7222A3693600D80C91 /* OpenSkyNetworkManager.swift in Sources */,
 				A79A76F022A37F5300A17237 /* PathData.swift in Sources */,
 				A74E0F7F22A369C200D80C91 /* PlanePointAnnotation.swift in Sources */,
@@ -415,6 +422,7 @@
 				A74E0F7C22A369C200D80C91 /* Protocols.swift in Sources */,
 				A74E0F8722A36A0300D80C91 /* LocalizedConstants.swift in Sources */,
 				A74E0F8622A36A0300D80C91 /* Constants.swift in Sources */,
+				A79A76F922A3BA1000A17237 /* SimulationViewController.swift in Sources */,
 				A74E0FA622A36A5900D80C91 /* SlideMenuViewModel.swift in Sources */,
 				A74E0F9A22A36A4600D80C91 /* RefreshingView.swift in Sources */,
 				A74E0F7622A3695F00D80C91 /* LocationManager.swift in Sources */,

@@ -31,8 +31,7 @@ class MapViewController2: BaseMapViewController {
     }
     
     override func prepareViewConfigurations() {
-        addMapView()
-        addRefreshingView()
+        super.prepareViewConfigurations()
         addListeners()
         addSliderMenu()
     }
@@ -46,32 +45,6 @@ class MapViewController2: BaseMapViewController {
 
 // MARK: - major functions for controller
 extension MapViewController2 {
-    
-    private func addMapView() {
-        self.view.addSubview(mapView)
-        
-        NSLayoutConstraint.activate([
-            
-            mapView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            mapView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            mapView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            mapView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            
-            ])
-    }
-    
-    private func addRefreshingView() {
-        self.view.addSubview(refreshingView)
-        
-        NSLayoutConstraint.activate([
-            
-            refreshingView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            refreshingView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            refreshingView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            refreshingView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            
-            ])
-    }
     
     private func addListeners() {
         // data state listener
@@ -221,7 +194,7 @@ extension MapViewController2 {
         return createOpenSkyNetworkRequestStruct(highestNorthCorner: mapView.northWestCoordinate, lowestSouthCorner: mapView.southEastCoordinate)
     }
     
-    func delay(_ delay:Double, closure:@escaping ()->()) {
+    private func delay(_ delay:Double, closure:@escaping ()->()) {
         DispatchQueue.main.asyncAfter(
             deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
     }
@@ -235,6 +208,13 @@ extension MapViewController2 {
             navigationController.modalTransitionStyle = .crossDissolve
             self.present(navigationController, animated: true, completion: nil)
             
+            // to understand view dismissed
+            updatedLocationViewController.completionHandlerDismiss = { (dismiss) -> (Void) in
+                if dismiss {
+                    self.resetTimer() // for sure
+                    self.timerActivation(active: true)
+                }
+            }
             
         }
     }

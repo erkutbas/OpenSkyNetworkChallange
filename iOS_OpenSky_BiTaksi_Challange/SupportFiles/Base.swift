@@ -62,6 +62,7 @@ class CenterTemplateViewControler: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.isNavigationBarHidden = false
+        //self.leftDetailedInformation.text = LocalizedConstants.TitlePrompts.finishPrompt
     }
     
     lazy var centerViewContainer: UIView = {
@@ -135,7 +136,7 @@ class CenterTemplateViewControler: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "00:00"
         label.font = UIFont(name: "Avenir-Heavy", size: 30)
-        label.textColor = #colorLiteral(red: 0.1647058824, green: 0.1803921569, blue: 0.262745098, alpha: 1)
+        label.textColor = #colorLiteral(red: 0.1647058824, green: 0.1803921569, blue: 0.262745098, alpha: 1).withAlphaComponent(0.8)
         
         return label
     }()
@@ -164,7 +165,7 @@ class CenterTemplateViewControler: UIViewController {
         label.text = LocalizedConstants.TitlePrompts.endTime
         //label.font = UIFont(name: "Avenier-Medium", size: 48)
         label.font = UIFont(name: "Avenir-Medium", size: 18)
-        label.textColor = #colorLiteral(red: 0.1647058824, green: 0.1803921569, blue: 0.262745098, alpha: 1)
+        label.textColor = #colorLiteral(red: 0.1647058824, green: 0.1803921569, blue: 0.262745098, alpha: 1).withAlphaComponent(0.8)
         
         return label
     }()
@@ -208,7 +209,7 @@ class CenterTemplateViewControler: UIViewController {
         label.text = LocalizedConstants.TitlePrompts.icao24Info
         //label.font = UIFont(name: "Avenier-Medium", size: 48)
         label.font = UIFont(name: "Avenir-Medium", size: 18)
-        label.textColor = #colorLiteral(red: 0.1647058824, green: 0.1803921569, blue: 0.262745098, alpha: 1)
+        label.textColor = #colorLiteral(red: 0.1647058824, green: 0.1803921569, blue: 0.262745098, alpha: 1).withAlphaComponent(0.8)
         
         return label
     }()
@@ -234,7 +235,7 @@ class CenterTemplateViewControler: UIViewController {
         temp.isUserInteractionEnabled = true
         temp.thumbTintColor = #colorLiteral(red: 0.1647058824, green: 0.1803921569, blue: 0.262745098, alpha: 1)
         temp.minimumTrackTintColor = #colorLiteral(red: 0.4066316783, green: 0.3673116565, blue: 1, alpha: 1)
-        temp.minimumValue = 10
+        temp.minimumValue = 0
         temp.maximumValue = 60
         temp.setValue(0, animated: true)
         //temp.addTarget(self, action: .changeSliderValue, for: .valueChanged)
@@ -313,6 +314,9 @@ class CenterTemplateViewControler: UIViewController {
     func prepareViewConfigurations() {
         print("KOKO4")
         addViews()
+        configureSliderOptions()
+        configureStackViewPrompts()
+        configurationOfOperationButtons()
         
     }
     
@@ -350,11 +354,11 @@ class CenterTemplateViewControler: UIViewController {
             middleStackView.centerXAnchor.constraint(equalTo: self.centerViewContainer.centerXAnchor),
             middleStackView.bottomAnchor.constraint(equalTo: self.centerViewTopImage.bottomAnchor, constant: 10),
             
-            rightStackView.leadingAnchor.constraint(equalTo: self.centerViewContainer.leadingAnchor, constant: 10),
-            rightStackView.topAnchor.constraint(equalTo: self.centerViewTopImage.bottomAnchor, constant: 10),
-            
-            leftStackView.trailingAnchor.constraint(equalTo: self.centerViewContainer.trailingAnchor, constant: -10),
+            leftStackView.leadingAnchor.constraint(equalTo: self.centerViewContainer.leadingAnchor, constant: 10),
             leftStackView.topAnchor.constraint(equalTo: self.centerViewTopImage.bottomAnchor, constant: 10),
+            
+            rightStackView.trailingAnchor.constraint(equalTo: self.centerViewContainer.trailingAnchor, constant: -10),
+            rightStackView.topAnchor.constraint(equalTo: self.centerViewTopImage.bottomAnchor, constant: 10),
             
             operationButtonsStackView.leadingAnchor.constraint(equalTo: self.centerViewContainer.leadingAnchor, constant: 10),
             operationButtonsStackView.trailingAnchor.constraint(equalTo: self.centerViewContainer.trailingAnchor, constant: -10),
@@ -364,7 +368,6 @@ class CenterTemplateViewControler: UIViewController {
             rangeSlider.trailingAnchor.constraint(equalTo: self.centerViewContainer.trailingAnchor, constant: -10),
             rangeSlider.bottomAnchor.constraint(equalTo: self.operationButtonsStackView.topAnchor, constant: -10),
             
-            sliderTitle.bottomAnchor.constraint(equalTo: self.rangeSlider.topAnchor, constant: -15),
             sliderTitle.centerXAnchor.constraint(equalTo: self.centerViewContainer.centerXAnchor),
             sliderTitle.bottomAnchor.constraint(equalTo: self.rangeSlider.topAnchor, constant: -10),
             
@@ -409,8 +412,30 @@ class BaseMapViewController: UIViewController {
         print("Receive memory warning from \(String(describing: self))")
     }
     
-    func prepareViewConfigurations() {}
+    func prepareViewConfigurations() {
+        addView()
+    }
+    
     func configureMapViewSettings() {}
+    
+    func addView() {
+        self.view.addSubview(mapView)
+        self.view.addSubview(refreshingView)
+        
+        NSLayoutConstraint.activate([
+            
+            mapView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            mapView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            mapView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            mapView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            refreshingView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            refreshingView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            refreshingView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            refreshingView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            
+            ])
+        
+    }
     
     
 }

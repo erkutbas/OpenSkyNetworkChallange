@@ -16,10 +16,12 @@
 "filterOptions" = "Filter Options";
 "detailedFilterOptions" = "You can choose country.";
 
-"startTime" = "Başlangıç";
-"endTime" = "Başlangıç";
-"simulatorSpeed" = "Simulator Hızı";
-"icao24Info" = "Icao24 Bilgisi";
+"startTime" = "Start Time";
+"endTime" = "End Time";
+"simulatorSpeed" = "Simulation Speed";
+"icao24Info" = "Icao24 Info";
 "cancelPrompt" = "Cancel";
-"simulatePrompt" = "Başla";
-"finishPrompt" = "Bitir";
+"simulatePrompt" = "Simulate";
+"finishPrompt" = "Finish";
+"simulationScreen" = "Simulation Screen";
+

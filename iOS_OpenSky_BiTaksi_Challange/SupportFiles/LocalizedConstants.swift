@@ -31,6 +31,7 @@ struct LocalizedConstants {
         static let cancelPrompt = NSLocalizedString("cancelPrompt", comment: "")
         static let simulatePrompt = NSLocalizedString("simulatePrompt", comment: "")
         static let finishPrompt = NSLocalizedString("finishPrompt", comment: "")
+        static let simulationScreen = NSLocalizedString("simulationScreen", comment: "")
         
     }
 }

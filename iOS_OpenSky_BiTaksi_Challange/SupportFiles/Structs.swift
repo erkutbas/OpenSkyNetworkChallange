@@ -71,3 +71,19 @@ struct PathStruct {
     }
 }
 
+struct SimulationInputs {
+    let simulationSeconds: Int?
+    let paths: Array<PathData>?
+    
+    init() {
+        self.simulationSeconds = CONSTANT.NUMERICS.INT_ZERO
+        self.paths = []
+    }
+    
+    init(simulationSeconds: Int, paths: Array<PathData>) {
+        self.simulationSeconds = simulationSeconds
+        self.paths = paths
+    }
+    
+}
+

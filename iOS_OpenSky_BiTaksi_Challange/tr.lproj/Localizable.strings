@@ -17,9 +17,11 @@
 "detailedFilterOptions" = "Ülkeye göre uçuş seçebilirsiniz";
 
 "startTime" = "Başlangıç";
-"endTime" = "Başlangıç";
+"endTime" = "Bitiş";
 "simulatorSpeed" = "Simulator Hızı";
 "icao24Info" = "Icao24 Bilgisi";
-"cancelPrompt" = "Cancel";
+"cancelPrompt" = "Vazgeç";
 "simulatePrompt" = "Başla";
 "finishPrompt" = "Bitir";
+"simulationScreen" = "Simulasyon Ekranı";
+
