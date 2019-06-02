@@ -84,6 +84,10 @@ class SlideMenuLoader: NSObject {
         slideMenu.updateSlideMenuData(data: data)
     }
     
+    func updateFlightCount(count: Int) {
+        slideMenu.updateFlightCount(count: count)
+    }
+    
 }
 
 // MARK: - UIGestureRecognizerDelegate

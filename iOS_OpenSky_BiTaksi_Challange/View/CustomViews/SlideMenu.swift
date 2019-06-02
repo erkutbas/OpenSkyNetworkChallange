@@ -242,6 +242,10 @@ class SlideMenu: BaseView {
         slideMenuViewModel.selectedCountry.value = LocalizedConstants.SlideMenuPrompts.detailedFilterOptions
     }
     
+    func updateFlightCount(count: Int) {
+        
+    }
+    
     func setDelegation(delegate: SlideMenuProtocols) {
         self.delegate = delegate
     }

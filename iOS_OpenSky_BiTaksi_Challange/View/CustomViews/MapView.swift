@@ -11,8 +11,6 @@ import MapKit
 
 class MapView: BaseView {
     
-    private var mapViewModel = MapViewModel()
-    
     lazy var mapView: MKMapView = {
         let temp = MKMapView(frame: .zero)
         temp.translatesAutoresizingMaskIntoConstraints = false
@@ -34,10 +32,6 @@ class MapView: BaseView {
         configureViewSetttings()
     }
     
-    deinit {
-        mapViewModel.annotationData.unbind()
-    }
-    
 }
 
 // MARK: - major functions
@@ -45,7 +39,6 @@ extension MapView {
     
     private func configureViewSetttings() {
         addMapView()
-        addListeners()
         
     }
     
@@ -77,13 +70,6 @@ extension MapView {
         
         return openSkyNetworkRequestStruct
         
-    }
-    
-    private func addListeners() {
-        mapViewModel.annotationData.bind { (data) in
-            print("data geldi")
-            print("data : \(data)")
-        }
     }
     
     private func removeAnnotationsOnMap() {
@@ -174,7 +160,7 @@ extension MapView: MKMapViewDelegate {
         
         guard let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: PlaneAnnotationView.identifier) as? PlaneAnnotationView else { return nil }
         
-        annotationView.delegate = self
+        //annotationView.delegate = self
 //        annotationView.frame.size.height = 50
 //        annotationView.frame.size.width = 50
         
@@ -184,29 +170,4 @@ extension MapView: MKMapViewDelegate {
     
 }
 
-// MARK: - MapViewProtocols
-extension MapView: MapViewProtocols {
-    func planeAnnotationSelected(data: StateData) {
-        print("planeAnnotationSelected start")
-        print("ICAO24 : \(data.icao24)")
-    }
-}
 
-// MARK: - get frame coordinates and mapKit location data
-extension MKMapView {
-    var northWestCoordinate: CLLocationCoordinate2D {
-        return MKMapPoint(x: visibleMapRect.minX, y: visibleMapRect.minY).coordinate
-    }
-    
-    var northEastCoordinate: CLLocationCoordinate2D {
-        return MKMapPoint(x: visibleMapRect.maxX, y: visibleMapRect.minY).coordinate
-    }
-    
-    var southEastCoordinate: CLLocationCoordinate2D {
-        return MKMapPoint(x: visibleMapRect.maxX, y: visibleMapRect.maxY).coordinate
-    }
-    
-    var southWestCoordinate: CLLocationCoordinate2D {
-        return MKMapPoint(x: visibleMapRect.minX, y: visibleMapRect.maxY).coordinate
-    }
-}

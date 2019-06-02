@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 class BaseView: UIView {
     
@@ -27,5 +28,45 @@ class BaseView: UIView {
 }
 
 class BaseMapView: BaseView {
+    
+}
+
+class BaseMapViewController: UIViewController {
+    
+    lazy var mapView: MKMapView = {
+        let temp = MKMapView(frame: .zero)
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.isUserInteractionEnabled = true
+        temp.showsScale = true
+        temp.showsCompass = true
+        temp.showsUserLocation = true
+        //temp.setUserTrackingMode(.followWithHeading, animated: true)
+//        temp.delegate = self
+//
+//        temp.register(PlaneAnnotationView.self, forAnnotationViewWithReuseIdentifier: PlaneAnnotationView.identifier)
+        
+        return temp
+    }()
+    
+    lazy var refreshingView: RefreshingView = {
+        let temp = RefreshingView()
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.isUserInteractionEnabled = false
+        return temp
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        prepareViewConfigurations()
+        configureMapViewSettings()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        print("Receive memory warning from \(String(describing: self))")
+    }
+    
+    func prepareViewConfigurations() {}
+    func configureMapViewSettings() {}
     
 }

@@ -59,7 +59,7 @@ class OpenSkyNetworkManager {
         case .stateVectorsAll:
             urlComponent?.queryItems = [URLQueryItem(name: "lamin", value: openSkyNetworkRequestStruct.lamin), URLQueryItem(name: "lomin", value: openSkyNetworkRequestStruct.lomin), URLQueryItem(name: "lamax", value: openSkyNetworkRequestStruct.lamax), URLQueryItem(name: "lomax", value: openSkyNetworkRequestStruct.lomax)]
             
-        case .timeIcao:
+        case .updatedLocationValue:
             break
         }
         

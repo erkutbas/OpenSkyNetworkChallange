@@ -10,12 +10,12 @@ import Foundation
 
 protocol MapViewProtocols: class {
     func returnLatLongData(openSkyNetworkRequestStruct: OpenSkyNetworkRequestStruct)
-    func planeAnnotationSelected(data: StateData)
+    func planeAnnotationSelected(data: CommonPlaceData)
 }
 
 extension MapViewProtocols {
     func returnLatLongData(openSkyNetworkRequestStruct: OpenSkyNetworkRequestStruct) {}
-    func planeAnnotationSelected(data: StateData) {}
+    func planeAnnotationSelected(data: CommonPlaceData) {}
 }
 
 protocol SlideMenuProtocols: class {
@@ -23,3 +23,7 @@ protocol SlideMenuProtocols: class {
 }
 
 protocol CommonPlaceData {}
+
+protocol CommonViewModel {
+    func handleGenericResponse<T: Codable>(response: Result<T, Error>)
+}

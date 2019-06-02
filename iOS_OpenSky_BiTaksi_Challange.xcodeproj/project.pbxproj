@@ -44,6 +44,7 @@
 		A74E0FA522A36A5900D80C91 /* MapViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0FA222A36A5900D80C91 /* MapViewControllerViewModel.swift */; };
 		A74E0FA622A36A5900D80C91 /* SlideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0FA322A36A5900D80C91 /* SlideMenuViewModel.swift */; };
 		A74E0FA922A36AF000D80C91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A74E0FAB22A36AF000D80C91 /* Localizable.strings */; };
+		A79A76E722A370CA00A17237 /* MapViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A76E622A370CA00A17237 /* MapViewController2.swift */; };
 		E5B4AD9DFDFE247755CE4F06 /* Pods_iOS_OpenSky_BiTaksi_Challange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBF96983721E0B5BA520BB6 /* Pods_iOS_OpenSky_BiTaksi_Challange.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		A74E0FAA22A36AF000D80C91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A74E0FAC22A36B0600D80C91 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A74E0FAD22A36B0600D80C91 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A79A76E622A370CA00A17237 /* MapViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController2.swift; sourceTree = "<group>"; };
 		B20137907D098718C445E3F1 /* Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_OpenSky_BiTaksi_Challange/Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -236,6 +238,7 @@
 			children = (
 				A74E0F9622A36A4600D80C91 /* MapViewController.swift */,
 				A74E0F9722A36A4600D80C91 /* PermissionViewController.swift */,
+				A79A76E622A370CA00A17237 /* MapViewController2.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				A74E0FA622A36A5900D80C91 /* SlideMenuViewModel.swift in Sources */,
 				A74E0F9A22A36A4600D80C91 /* RefreshingView.swift in Sources */,
 				A74E0F7622A3695F00D80C91 /* LocationManager.swift in Sources */,
+				A79A76E722A370CA00A17237 /* MapViewController2.swift in Sources */,
 				A74E0F4E22A3688600D80C91 /* ViewController.swift in Sources */,
 				A74E0F9922A36A4600D80C91 /* PlaneAnnotationView.swift in Sources */,
 				A74E0F4C22A3688600D80C91 /* AppDelegate.swift in Sources */,
@@ -558,6 +562,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZVL2SV8VV7;
 				INFOPLIST_FILE = iOS_OpenSky_BiTaksi_Challange/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -577,6 +582,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZVL2SV8VV7;
 				INFOPLIST_FILE = iOS_OpenSky_BiTaksi_Challange/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

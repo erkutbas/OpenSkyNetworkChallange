@@ -88,8 +88,10 @@ extension PlaneAnnotationView: UIGestureRecognizerDelegate {
         print("YAPISTIRRRRRRRRRR")
         
         guard let annotation = self.annotation as? PlanePointAnnotation else { return }
+        guard let data = annotation.commonPlaceData else { return }
         
-        delegate?.planeAnnotationSelected(data: annotation.stateData)
+        // does not require to force unwrap. if it's nil, would not crash
+        delegate?.planeAnnotationSelected(data: data)
     }
     
 }

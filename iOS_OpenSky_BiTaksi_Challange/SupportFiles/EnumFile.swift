@@ -30,7 +30,7 @@ enum BackendApiError: Error {
 
 enum OpenSkyRestApiCallType {
     case stateVectorsAll
-    case timeIcao
+    case updatedLocationValue
 }
 
 enum ApiCallStatus {

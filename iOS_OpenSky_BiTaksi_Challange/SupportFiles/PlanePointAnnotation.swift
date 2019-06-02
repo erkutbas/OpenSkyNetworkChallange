@@ -11,10 +11,10 @@ import MapKit
 
 class PlanePointAnnotation: MKPointAnnotation {
     
-    var stateData = StateData()
+    var commonPlaceData: CommonPlaceData?
     
-    init(data: StateData) {
-        self.stateData = data
+    init(data: CommonPlaceData) {
+        self.commonPlaceData = data
     }
     
 }
