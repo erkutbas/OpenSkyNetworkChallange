@@ -1,0 +1,17 @@
+/*
+ Localizable.strings
+ OpenSkyNetworkChallange
+ 
+ Created by Erkut Baş on 5/30/19.
+ Copyright © 2019 Erkut Baş. All rights reserved.
+ */
+
+// permission view controller prompts
+"permissionMainSubject" = "Start Discovery";
+"permissionDetailedInformation" = "OpenSkyChallange needs location permission to enhance your experience.";
+"locationRequest" = "Access Location";
+"locationAccessed" = "Location Permission Granted";
+"locationEnable" = "Enable Location From Settings";
+
+"filterOptions" = "Filter Options";
+"detailedFilterOptions" = "You can choose country.";

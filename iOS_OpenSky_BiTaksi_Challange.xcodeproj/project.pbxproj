@@ -9,19 +9,89 @@
 /* Begin PBXBuildFile section */
 		A74E0F4C22A3688600D80C91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F4B22A3688600D80C91 /* AppDelegate.swift */; };
 		A74E0F4E22A3688600D80C91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F4D22A3688600D80C91 /* ViewController.swift */; };
-		A74E0F5122A3688600D80C91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74E0F4F22A3688600D80C91 /* Main.storyboard */; };
 		A74E0F5322A3688700D80C91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74E0F5222A3688700D80C91 /* Assets.xcassets */; };
 		A74E0F5622A3688700D80C91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74E0F5422A3688700D80C91 /* LaunchScreen.storyboard */; };
+		A74E0F6622A368CE00D80C91 /* tick.png in Resources */ = {isa = PBXBuildFile; fileRef = A74E0F5F22A368CC00D80C91 /* tick.png */; };
+		A74E0F6722A368CE00D80C91 /* placeholder_location.png in Resources */ = {isa = PBXBuildFile; fileRef = A74E0F6022A368CC00D80C91 /* placeholder_location.png */; };
+		A74E0F6822A368CE00D80C91 /* gradient_slider.png in Resources */ = {isa = PBXBuildFile; fileRef = A74E0F6122A368CC00D80C91 /* gradient_slider.png */; };
+		A74E0F6922A368CE00D80C91 /* location.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A74E0F6222A368CD00D80C91 /* location.jpg */; };
+		A74E0F6A22A368CE00D80C91 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = A74E0F6322A368CD00D80C91 /* cross.png */; };
+		A74E0F6B22A368CE00D80C91 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = A74E0F6422A368CE00D80C91 /* background.png */; };
+		A74E0F6C22A368CE00D80C91 /* wing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A74E0F6522A368CE00D80C91 /* wing.jpg */; };
+		A74E0F7022A3691400D80C91 /* SliderMenuLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F6F22A3691400D80C91 /* SliderMenuLoader.swift */; };
+		A74E0F7222A3693600D80C91 /* OpenSkyNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F7122A3693600D80C91 /* OpenSkyNetworkManager.swift */; };
+		A74E0F7422A3694900D80C91 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F7322A3694900D80C91 /* PermissionManager.swift */; };
+		A74E0F7622A3695F00D80C91 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F7522A3695F00D80C91 /* LocationManager.swift */; };
+		A74E0F7C22A369C200D80C91 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F7822A369C200D80C91 /* Protocols.swift */; };
+		A74E0F7D22A369C200D80C91 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F7922A369C200D80C91 /* Base.swift */; };
+		A74E0F7E22A369C200D80C91 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F7A22A369C200D80C91 /* Dynamic.swift */; };
+		A74E0F7F22A369C200D80C91 /* PlanePointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F7B22A369C200D80C91 /* PlanePointAnnotation.swift */; };
+		A74E0F8122A369DD00D80C91 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F8022A369DD00D80C91 /* Structs.swift */; };
+		A74E0F8322A369F300D80C91 /* EnumFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F8222A369F300D80C91 /* EnumFile.swift */; };
+		A74E0F8622A36A0300D80C91 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F8422A36A0300D80C91 /* Constants.swift */; };
+		A74E0F8722A36A0300D80C91 /* LocalizedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F8522A36A0300D80C91 /* LocalizedConstants.swift */; };
+		A74E0F8B22A36A2A00D80C91 /* StateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F8922A36A2A00D80C91 /* StateData.swift */; };
+		A74E0F8C22A36A2A00D80C91 /* OpenSkyNetworkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F8A22A36A2A00D80C91 /* OpenSkyNetworkData.swift */; };
+		A74E0F9822A36A4600D80C91 /* PermissionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F8F22A36A4600D80C91 /* PermissionButtonView.swift */; };
+		A74E0F9922A36A4600D80C91 /* PlaneAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9022A36A4600D80C91 /* PlaneAnnotationView.swift */; };
+		A74E0F9A22A36A4600D80C91 /* RefreshingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9122A36A4600D80C91 /* RefreshingView.swift */; };
+		A74E0F9B22A36A4600D80C91 /* PlaneClusterAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9222A36A4600D80C91 /* PlaneClusterAnnotation.swift */; };
+		A74E0F9C22A36A4600D80C91 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9322A36A4600D80C91 /* MapView.swift */; };
+		A74E0F9D22A36A4600D80C91 /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9422A36A4600D80C91 /* SlideMenu.swift */; };
+		A74E0F9E22A36A4600D80C91 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9622A36A4600D80C91 /* MapViewController.swift */; };
+		A74E0F9F22A36A4600D80C91 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9722A36A4600D80C91 /* PermissionViewController.swift */; };
+		A74E0FA422A36A5900D80C91 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0FA122A36A5900D80C91 /* MapViewModel.swift */; };
+		A74E0FA522A36A5900D80C91 /* MapViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0FA222A36A5900D80C91 /* MapViewControllerViewModel.swift */; };
+		A74E0FA622A36A5900D80C91 /* SlideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0FA322A36A5900D80C91 /* SlideMenuViewModel.swift */; };
+		A74E0FA922A36AF000D80C91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A74E0FAB22A36AF000D80C91 /* Localizable.strings */; };
+		E5B4AD9DFDFE247755CE4F06 /* Pods_iOS_OpenSky_BiTaksi_Challange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBF96983721E0B5BA520BB6 /* Pods_iOS_OpenSky_BiTaksi_Challange.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0105275A9C9E6CB0C15A71A1 /* Pods-iOS_OpenSky_BiTaksi_Challange.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_OpenSky_BiTaksi_Challange.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_OpenSky_BiTaksi_Challange/Pods-iOS_OpenSky_BiTaksi_Challange.debug.xcconfig"; sourceTree = "<group>"; };
+		3EBF96983721E0B5BA520BB6 /* Pods_iOS_OpenSky_BiTaksi_Challange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_OpenSky_BiTaksi_Challange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74E0F4822A3688600D80C91 /* iOS_OpenSky_BiTaksi_Challange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_OpenSky_BiTaksi_Challange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74E0F4B22A3688600D80C91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A74E0F4D22A3688600D80C91 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A74E0F5022A3688600D80C91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A74E0F5222A3688700D80C91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A74E0F5522A3688700D80C91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A74E0F5722A3688700D80C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A74E0F5F22A368CC00D80C91 /* tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tick.png; sourceTree = "<group>"; };
+		A74E0F6022A368CC00D80C91 /* placeholder_location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_location.png; sourceTree = "<group>"; };
+		A74E0F6122A368CC00D80C91 /* gradient_slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gradient_slider.png; sourceTree = "<group>"; };
+		A74E0F6222A368CD00D80C91 /* location.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = location.jpg; sourceTree = "<group>"; };
+		A74E0F6322A368CD00D80C91 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		A74E0F6422A368CE00D80C91 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		A74E0F6522A368CE00D80C91 /* wing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wing.jpg; sourceTree = "<group>"; };
+		A74E0F6F22A3691400D80C91 /* SliderMenuLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderMenuLoader.swift; sourceTree = "<group>"; };
+		A74E0F7122A3693600D80C91 /* OpenSkyNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSkyNetworkManager.swift; sourceTree = "<group>"; };
+		A74E0F7322A3694900D80C91 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
+		A74E0F7522A3695F00D80C91 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A74E0F7822A369C200D80C91 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		A74E0F7922A369C200D80C91 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		A74E0F7A22A369C200D80C91 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		A74E0F7B22A369C200D80C91 /* PlanePointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanePointAnnotation.swift; sourceTree = "<group>"; };
+		A74E0F8022A369DD00D80C91 /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		A74E0F8222A369F300D80C91 /* EnumFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnumFile.swift; sourceTree = "<group>"; };
+		A74E0F8422A36A0300D80C91 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A74E0F8522A36A0300D80C91 /* LocalizedConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedConstants.swift; sourceTree = "<group>"; };
+		A74E0F8922A36A2A00D80C91 /* StateData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateData.swift; sourceTree = "<group>"; };
+		A74E0F8A22A36A2A00D80C91 /* OpenSkyNetworkData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenSkyNetworkData.swift; sourceTree = "<group>"; };
+		A74E0F8F22A36A4600D80C91 /* PermissionButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionButtonView.swift; sourceTree = "<group>"; };
+		A74E0F9022A36A4600D80C91 /* PlaneAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaneAnnotationView.swift; sourceTree = "<group>"; };
+		A74E0F9122A36A4600D80C91 /* RefreshingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshingView.swift; sourceTree = "<group>"; };
+		A74E0F9222A36A4600D80C91 /* PlaneClusterAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaneClusterAnnotation.swift; sourceTree = "<group>"; };
+		A74E0F9322A36A4600D80C91 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		A74E0F9422A36A4600D80C91 /* SlideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
+		A74E0F9622A36A4600D80C91 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A74E0F9722A36A4600D80C91 /* PermissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
+		A74E0FA122A36A5900D80C91 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		A74E0FA222A36A5900D80C91 /* MapViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewControllerViewModel.swift; sourceTree = "<group>"; };
+		A74E0FA322A36A5900D80C91 /* SlideMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuViewModel.swift; sourceTree = "<group>"; };
+		A74E0FAA22A36AF000D80C91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A74E0FAC22A36B0600D80C91 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A74E0FAD22A36B0600D80C91 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B20137907D098718C445E3F1 /* Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_OpenSky_BiTaksi_Challange/Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +99,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5B4AD9DFDFE247755CE4F06 /* Pods_iOS_OpenSky_BiTaksi_Challange.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A2E9C41DE7B39747324A396 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0105275A9C9E6CB0C15A71A1 /* Pods-iOS_OpenSky_BiTaksi_Challange.debug.xcconfig */,
+				B20137907D098718C445E3F1 /* Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A74E0F3F22A3688600D80C91 = {
 			isa = PBXGroup;
 			children = (
 				A74E0F4A22A3688600D80C91 /* iOS_OpenSky_BiTaksi_Challange */,
 				A74E0F4922A3688600D80C91 /* Products */,
+				7A2E9C41DE7B39747324A396 /* Pods */,
+				DB5193BA0E667B4858410BD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +136,126 @@
 		A74E0F4A22A3688600D80C91 /* iOS_OpenSky_BiTaksi_Challange */ = {
 			isa = PBXGroup;
 			children = (
+				A74E0F8822A36A0E00D80C91 /* Model */,
+				A74E0F8D22A36A3100D80C91 /* View */,
+				A74E0FA022A36A5900D80C91 /* ViewModel */,
+				A74E0F7722A3696700D80C91 /* SupportFiles */,
+				A74E0F6D22A368D400D80C91 /* Services */,
+				A74E0F5D22A368B300D80C91 /* Resources */,
 				A74E0F4B22A3688600D80C91 /* AppDelegate.swift */,
 				A74E0F4D22A3688600D80C91 /* ViewController.swift */,
-				A74E0F4F22A3688600D80C91 /* Main.storyboard */,
 				A74E0F5222A3688700D80C91 /* Assets.xcassets */,
 				A74E0F5422A3688700D80C91 /* LaunchScreen.storyboard */,
 				A74E0F5722A3688700D80C91 /* Info.plist */,
+				A74E0FAB22A36AF000D80C91 /* Localizable.strings */,
 			);
 			path = iOS_OpenSky_BiTaksi_Challange;
+			sourceTree = "<group>";
+		};
+		A74E0F5D22A368B300D80C91 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A74E0F5E22A368B900D80C91 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A74E0F5E22A368B900D80C91 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A74E0F6422A368CE00D80C91 /* background.png */,
+				A74E0F6322A368CD00D80C91 /* cross.png */,
+				A74E0F6122A368CC00D80C91 /* gradient_slider.png */,
+				A74E0F6222A368CD00D80C91 /* location.jpg */,
+				A74E0F6022A368CC00D80C91 /* placeholder_location.png */,
+				A74E0F5F22A368CC00D80C91 /* tick.png */,
+				A74E0F6522A368CE00D80C91 /* wing.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		A74E0F6D22A368D400D80C91 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A74E0F6F22A3691400D80C91 /* SliderMenuLoader.swift */,
+				A74E0F7122A3693600D80C91 /* OpenSkyNetworkManager.swift */,
+				A74E0F7322A3694900D80C91 /* PermissionManager.swift */,
+				A74E0F7522A3695F00D80C91 /* LocationManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A74E0F7722A3696700D80C91 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A74E0F8422A36A0300D80C91 /* Constants.swift */,
+				A74E0F8522A36A0300D80C91 /* LocalizedConstants.swift */,
+				A74E0F8222A369F300D80C91 /* EnumFile.swift */,
+				A74E0F8022A369DD00D80C91 /* Structs.swift */,
+				A74E0F7922A369C200D80C91 /* Base.swift */,
+				A74E0F7A22A369C200D80C91 /* Dynamic.swift */,
+				A74E0F7B22A369C200D80C91 /* PlanePointAnnotation.swift */,
+				A74E0F7822A369C200D80C91 /* Protocols.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		A74E0F8822A36A0E00D80C91 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A74E0F8A22A36A2A00D80C91 /* OpenSkyNetworkData.swift */,
+				A74E0F8922A36A2A00D80C91 /* StateData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A74E0F8D22A36A3100D80C91 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A74E0F9522A36A4600D80C91 /* Controller */,
+				A74E0F8E22A36A4600D80C91 /* CustomViews */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A74E0F8E22A36A4600D80C91 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				A74E0F8F22A36A4600D80C91 /* PermissionButtonView.swift */,
+				A74E0F9022A36A4600D80C91 /* PlaneAnnotationView.swift */,
+				A74E0F9122A36A4600D80C91 /* RefreshingView.swift */,
+				A74E0F9222A36A4600D80C91 /* PlaneClusterAnnotation.swift */,
+				A74E0F9322A36A4600D80C91 /* MapView.swift */,
+				A74E0F9422A36A4600D80C91 /* SlideMenu.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		A74E0F9522A36A4600D80C91 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A74E0F9622A36A4600D80C91 /* MapViewController.swift */,
+				A74E0F9722A36A4600D80C91 /* PermissionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A74E0FA022A36A5900D80C91 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A74E0FA122A36A5900D80C91 /* MapViewModel.swift */,
+				A74E0FA222A36A5900D80C91 /* MapViewControllerViewModel.swift */,
+				A74E0FA322A36A5900D80C91 /* SlideMenuViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DB5193BA0E667B4858410BD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EBF96983721E0B5BA520BB6 /* Pods_iOS_OpenSky_BiTaksi_Challange.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A74E0F5A22A3688700D80C91 /* Build configuration list for PBXNativeTarget "iOS_OpenSky_BiTaksi_Challange" */;
 			buildPhases = (
+				BE0345461EFA377106F5791B /* [CP] Check Pods Manifest.lock */,
 				A74E0F4422A3688600D80C91 /* Sources */,
 				A74E0F4522A3688600D80C91 /* Frameworks */,
 				A74E0F4622A3688600D80C91 /* Resources */,
+				451D0FC79B430CDE6DFB1447 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -106,6 +302,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = A74E0F3F22A3688600D80C91;
 			productRefGroup = A74E0F4922A3688600D80C91 /* Products */;
@@ -122,41 +319,114 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A74E0F6722A368CE00D80C91 /* placeholder_location.png in Resources */,
 				A74E0F5622A3688700D80C91 /* LaunchScreen.storyboard in Resources */,
+				A74E0FA922A36AF000D80C91 /* Localizable.strings in Resources */,
 				A74E0F5322A3688700D80C91 /* Assets.xcassets in Resources */,
-				A74E0F5122A3688600D80C91 /* Main.storyboard in Resources */,
+				A74E0F6622A368CE00D80C91 /* tick.png in Resources */,
+				A74E0F6922A368CE00D80C91 /* location.jpg in Resources */,
+				A74E0F6822A368CE00D80C91 /* gradient_slider.png in Resources */,
+				A74E0F6C22A368CE00D80C91 /* wing.jpg in Resources */,
+				A74E0F6A22A368CE00D80C91 /* cross.png in Resources */,
+				A74E0F6B22A368CE00D80C91 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		451D0FC79B430CDE6DFB1447 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iOS_OpenSky_BiTaksi_Challange/Pods-iOS_OpenSky_BiTaksi_Challange-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS_OpenSky_BiTaksi_Challange/Pods-iOS_OpenSky_BiTaksi_Challange-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE0345461EFA377106F5791B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS_OpenSky_BiTaksi_Challange-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A74E0F4422A3688600D80C91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A74E0F9B22A36A4600D80C91 /* PlaneClusterAnnotation.swift in Sources */,
+				A74E0F9F22A36A4600D80C91 /* PermissionViewController.swift in Sources */,
+				A74E0FA522A36A5900D80C91 /* MapViewControllerViewModel.swift in Sources */,
+				A74E0F8C22A36A2A00D80C91 /* OpenSkyNetworkData.swift in Sources */,
+				A74E0F7D22A369C200D80C91 /* Base.swift in Sources */,
+				A74E0F7222A3693600D80C91 /* OpenSkyNetworkManager.swift in Sources */,
+				A74E0F7F22A369C200D80C91 /* PlanePointAnnotation.swift in Sources */,
+				A74E0FA422A36A5900D80C91 /* MapViewModel.swift in Sources */,
+				A74E0F8122A369DD00D80C91 /* Structs.swift in Sources */,
+				A74E0F9D22A36A4600D80C91 /* SlideMenu.swift in Sources */,
+				A74E0F7422A3694900D80C91 /* PermissionManager.swift in Sources */,
+				A74E0F9C22A36A4600D80C91 /* MapView.swift in Sources */,
+				A74E0F9E22A36A4600D80C91 /* MapViewController.swift in Sources */,
+				A74E0F9822A36A4600D80C91 /* PermissionButtonView.swift in Sources */,
+				A74E0F8B22A36A2A00D80C91 /* StateData.swift in Sources */,
+				A74E0F7E22A369C200D80C91 /* Dynamic.swift in Sources */,
+				A74E0F7C22A369C200D80C91 /* Protocols.swift in Sources */,
+				A74E0F8722A36A0300D80C91 /* LocalizedConstants.swift in Sources */,
+				A74E0F8622A36A0300D80C91 /* Constants.swift in Sources */,
+				A74E0FA622A36A5900D80C91 /* SlideMenuViewModel.swift in Sources */,
+				A74E0F9A22A36A4600D80C91 /* RefreshingView.swift in Sources */,
+				A74E0F7622A3695F00D80C91 /* LocationManager.swift in Sources */,
 				A74E0F4E22A3688600D80C91 /* ViewController.swift in Sources */,
+				A74E0F9922A36A4600D80C91 /* PlaneAnnotationView.swift in Sources */,
 				A74E0F4C22A3688600D80C91 /* AppDelegate.swift in Sources */,
+				A74E0F8322A369F300D80C91 /* EnumFile.swift in Sources */,
+				A74E0F7022A3691400D80C91 /* SliderMenuLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A74E0F4F22A3688600D80C91 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A74E0F5022A3688600D80C91 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A74E0F5422A3688700D80C91 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A74E0F5522A3688700D80C91 /* Base */,
+				A74E0FAC22A36B0600D80C91 /* tr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A74E0FAB22A36AF000D80C91 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A74E0FAA22A36AF000D80C91 /* en */,
+				A74E0FAD22A36B0600D80C91 /* tr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -166,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -227,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -280,6 +552,7 @@
 		};
 		A74E0F5B22A3688700D80C91 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0105275A9C9E6CB0C15A71A1 /* Pods-iOS_OpenSky_BiTaksi_Challange.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +571,7 @@
 		};
 		A74E0F5C22A3688700D80C91 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B20137907D098718C445E3F1 /* Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

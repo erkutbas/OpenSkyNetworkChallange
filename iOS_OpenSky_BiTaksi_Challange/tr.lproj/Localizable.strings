@@ -1,0 +1,17 @@
+/*
+ Localizable.strings
+ OpenSkyNetworkChallange
+ 
+ Created by Erkut Baş on 5/30/19.
+ Copyright © 2019 Erkut Baş. All rights reserved.
+ */
+
+// Permission prompts
+"permissionMainSubject" = "Kesfetmeye Basla";
+"permissionDetailedInformation" = "OpenSkyChallange'ın uygulama deneyimiz icin lokasyon iznine ihtiyaci var.";
+"locationRequest" = "Lokasyon erişimine izin ver";
+"locationAccessed" = "Lokasyon erişim izni alındı";
+"locationEnable" = "Lokasyon erişimini ayarlardan aç";
+
+"filterOptions" = "Filtreleme Seçenekleri";
+"detailedFilterOptions" = "Ülkeye göre uçuş seçebilirsiniz";
