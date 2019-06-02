@@ -115,11 +115,11 @@ class ErrorView: BaseView {
     }
     
     private func showAnimation(view: UIView, completion: @escaping AnimationCompletion) {
-        let animationDistance = view.frame.height
+        let animationDistance = view.frame.height + 50
         
         switch placement {
         case .top:
-            self.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+            self.topAnchor.constraint(equalTo: topAnchor).isActive = true
             self.transform = CGAffineTransform(translationX: 0, y: -animationDistance)
         case .bottom:
             self.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true

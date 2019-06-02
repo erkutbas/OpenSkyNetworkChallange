@@ -92,7 +92,7 @@ extension MapViewController2 {
     private func triggerAlertView(errorOccured: Bool) {
         if errorOccured {
             DispatchQueue.main.async {
-                AlertViewManager.show(type: .error, placement: .top, body: LocalizedConstants.TitlePrompts.brokenData)
+                AlertViewManager.show(targetView: self.view, type: .error, placement: .top, title: " ", body: LocalizedConstants.TitlePrompts.brokenData)
             }
         }
     }
@@ -102,6 +102,7 @@ extension MapViewController2 {
     }
     
     private func runTimer() {
+        timer?.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: Selector.triggerRefreshData, userInfo: nil, repeats: true)
     }
     

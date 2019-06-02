@@ -151,7 +151,7 @@ extension SimulationViewController {
                             guard let coordinate = self.createCoordinate(path: paths[index]) else { return }
                             annotation.coordinate = coordinate
                             self.changeMapViewRegion(path: paths[index])
-                            //self.addPolyLine(path: paths[index])
+                            self.addPolyLine(path: paths[index])
                         })
                     }
                 }
@@ -207,6 +207,9 @@ extension SimulationViewController {
     @objc fileprivate func refreshTriggered(_ sender: UIBarButtonItem) {
         print("\(#function)")
         self.timer?.invalidate()
+        
+        simulationViewModel.simulationFinished.value = false
+        
         self.refreshButtonActivationManager(finish: false)
         self.removePolyLines()
         self.refreshingView.activationManager(active: true)
@@ -232,18 +235,18 @@ extension SimulationViewController: MKMapViewDelegate {
         return annotationView
     }
     
-//    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer! {
-//        if overlay is MKPolyline {
-//            var polylineRenderer = MKPolylineRenderer(overlay: overlay)
-//            polylineRenderer.strokeColor = #colorLiteral(red: 1, green: 0.3098039216, blue: 0.6039215686, alpha: 1)
-//            polylineRenderer.lineWidth = 2
-//            polylineRenderer.lineCap = .round
-//            polylineRenderer.lineJoin = .round
-//            return polylineRenderer
-//        }
-//
-//        return nil
-//    }
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer! {
+        if overlay is MKPolyline {
+            var polylineRenderer = MKPolylineRenderer(overlay: overlay)
+            polylineRenderer.strokeColor = #colorLiteral(red: 1, green: 0.3098039216, blue: 0.6039215686, alpha: 1)
+            polylineRenderer.lineWidth = 2
+            polylineRenderer.lineCap = .round
+            polylineRenderer.lineJoin = .round
+            return polylineRenderer
+        }
+
+        return nil
+    }
     
 }
 

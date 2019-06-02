@@ -51,6 +51,7 @@ class MapViewControllerViewModel: CommonViewModel {
         case .failure(let error):
             print("Error : \(error)")
             errorOccured.value = true
+            changeTimerListenerValue(timerControlStatus: .start)
         case .success(let data):
             errorOccured.value = false
             if let data = data as? OpenSkyNetworkData {
