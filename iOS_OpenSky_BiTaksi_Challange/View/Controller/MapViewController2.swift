@@ -127,7 +127,7 @@ extension MapViewController2 {
     @objc fileprivate func triggerRefreshData() {
         print("second : \(second)")
         second += 1
-        if second % 100 == 0 {
+        if second % 10 == 0 {
             self.resetTimer()
             viewModel.getStatesData(openSkyNetworkRequestStruct: getCurrentVisibleRectSkyNetworkRequestStruct())
         }
