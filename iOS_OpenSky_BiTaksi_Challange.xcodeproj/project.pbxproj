@@ -38,13 +38,17 @@
 		A74E0F9B22A36A4600D80C91 /* PlaneClusterAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9222A36A4600D80C91 /* PlaneClusterAnnotation.swift */; };
 		A74E0F9C22A36A4600D80C91 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9322A36A4600D80C91 /* MapView.swift */; };
 		A74E0F9D22A36A4600D80C91 /* SlideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9422A36A4600D80C91 /* SlideMenu.swift */; };
-		A74E0F9E22A36A4600D80C91 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9622A36A4600D80C91 /* MapViewController.swift */; };
 		A74E0F9F22A36A4600D80C91 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0F9722A36A4600D80C91 /* PermissionViewController.swift */; };
 		A74E0FA422A36A5900D80C91 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0FA122A36A5900D80C91 /* MapViewModel.swift */; };
 		A74E0FA522A36A5900D80C91 /* MapViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0FA222A36A5900D80C91 /* MapViewControllerViewModel.swift */; };
 		A74E0FA622A36A5900D80C91 /* SlideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E0FA322A36A5900D80C91 /* SlideMenuViewModel.swift */; };
 		A74E0FA922A36AF000D80C91 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A74E0FAB22A36AF000D80C91 /* Localizable.strings */; };
 		A79A76E722A370CA00A17237 /* MapViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A76E622A370CA00A17237 /* MapViewController2.swift */; };
+		A79A76EE22A37F4100A17237 /* OpenSkyUpdatedLocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A76ED22A37F4100A17237 /* OpenSkyUpdatedLocationData.swift */; };
+		A79A76F022A37F5300A17237 /* PathData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A76EF22A37F5300A17237 /* PathData.swift */; };
+		A79A76F322A38B6F00A17237 /* UpdatedLocationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A76F222A38B6F00A17237 /* UpdatedLocationInfoViewController.swift */; };
+		A79A76F622A3919400A17237 /* illustration.png in Resources */ = {isa = PBXBuildFile; fileRef = A79A76F422A3919400A17237 /* illustration.png */; };
+		A79A76F722A3919400A17237 /* dots.png in Resources */ = {isa = PBXBuildFile; fileRef = A79A76F522A3919400A17237 /* dots.png */; };
 		E5B4AD9DFDFE247755CE4F06 /* Pods_iOS_OpenSky_BiTaksi_Challange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBF96983721E0B5BA520BB6 /* Pods_iOS_OpenSky_BiTaksi_Challange.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,7 +88,6 @@
 		A74E0F9222A36A4600D80C91 /* PlaneClusterAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaneClusterAnnotation.swift; sourceTree = "<group>"; };
 		A74E0F9322A36A4600D80C91 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		A74E0F9422A36A4600D80C91 /* SlideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenu.swift; sourceTree = "<group>"; };
-		A74E0F9622A36A4600D80C91 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A74E0F9722A36A4600D80C91 /* PermissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
 		A74E0FA122A36A5900D80C91 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		A74E0FA222A36A5900D80C91 /* MapViewControllerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewControllerViewModel.swift; sourceTree = "<group>"; };
@@ -93,6 +96,11 @@
 		A74E0FAC22A36B0600D80C91 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A74E0FAD22A36B0600D80C91 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A79A76E622A370CA00A17237 /* MapViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController2.swift; sourceTree = "<group>"; };
+		A79A76ED22A37F4100A17237 /* OpenSkyUpdatedLocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSkyUpdatedLocationData.swift; sourceTree = "<group>"; };
+		A79A76EF22A37F5300A17237 /* PathData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathData.swift; sourceTree = "<group>"; };
+		A79A76F222A38B6F00A17237 /* UpdatedLocationInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatedLocationInfoViewController.swift; sourceTree = "<group>"; };
+		A79A76F422A3919400A17237 /* illustration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = illustration.png; sourceTree = "<group>"; };
+		A79A76F522A3919400A17237 /* dots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dots.png; sourceTree = "<group>"; };
 		B20137907D098718C445E3F1 /* Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_OpenSky_BiTaksi_Challange/Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +180,8 @@
 				A74E0F6022A368CC00D80C91 /* placeholder_location.png */,
 				A74E0F5F22A368CC00D80C91 /* tick.png */,
 				A74E0F6522A368CE00D80C91 /* wing.jpg */,
+				A79A76F522A3919400A17237 /* dots.png */,
+				A79A76F422A3919400A17237 /* illustration.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -206,7 +216,9 @@
 			isa = PBXGroup;
 			children = (
 				A74E0F8A22A36A2A00D80C91 /* OpenSkyNetworkData.swift */,
+				A79A76ED22A37F4100A17237 /* OpenSkyUpdatedLocationData.swift */,
 				A74E0F8922A36A2A00D80C91 /* StateData.swift */,
+				A79A76EF22A37F5300A17237 /* PathData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,9 +248,9 @@
 		A74E0F9522A36A4600D80C91 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A74E0F9622A36A4600D80C91 /* MapViewController.swift */,
 				A74E0F9722A36A4600D80C91 /* PermissionViewController.swift */,
 				A79A76E622A370CA00A17237 /* MapViewController2.swift */,
+				A79A76F222A38B6F00A17237 /* UpdatedLocationInfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -326,6 +338,8 @@
 				A74E0F5622A3688700D80C91 /* LaunchScreen.storyboard in Resources */,
 				A74E0FA922A36AF000D80C91 /* Localizable.strings in Resources */,
 				A74E0F5322A3688700D80C91 /* Assets.xcassets in Resources */,
+				A79A76F622A3919400A17237 /* illustration.png in Resources */,
+				A79A76F722A3919400A17237 /* dots.png in Resources */,
 				A74E0F6622A368CE00D80C91 /* tick.png in Resources */,
 				A74E0F6922A368CE00D80C91 /* location.jpg in Resources */,
 				A74E0F6822A368CE00D80C91 /* gradient_slider.png in Resources */,
@@ -387,15 +401,16 @@
 				A74E0F8C22A36A2A00D80C91 /* OpenSkyNetworkData.swift in Sources */,
 				A74E0F7D22A369C200D80C91 /* Base.swift in Sources */,
 				A74E0F7222A3693600D80C91 /* OpenSkyNetworkManager.swift in Sources */,
+				A79A76F022A37F5300A17237 /* PathData.swift in Sources */,
 				A74E0F7F22A369C200D80C91 /* PlanePointAnnotation.swift in Sources */,
 				A74E0FA422A36A5900D80C91 /* MapViewModel.swift in Sources */,
 				A74E0F8122A369DD00D80C91 /* Structs.swift in Sources */,
 				A74E0F9D22A36A4600D80C91 /* SlideMenu.swift in Sources */,
 				A74E0F7422A3694900D80C91 /* PermissionManager.swift in Sources */,
 				A74E0F9C22A36A4600D80C91 /* MapView.swift in Sources */,
-				A74E0F9E22A36A4600D80C91 /* MapViewController.swift in Sources */,
 				A74E0F9822A36A4600D80C91 /* PermissionButtonView.swift in Sources */,
 				A74E0F8B22A36A2A00D80C91 /* StateData.swift in Sources */,
+				A79A76EE22A37F4100A17237 /* OpenSkyUpdatedLocationData.swift in Sources */,
 				A74E0F7E22A369C200D80C91 /* Dynamic.swift in Sources */,
 				A74E0F7C22A369C200D80C91 /* Protocols.swift in Sources */,
 				A74E0F8722A36A0300D80C91 /* LocalizedConstants.swift in Sources */,
@@ -409,6 +424,7 @@
 				A74E0F4C22A3688600D80C91 /* AppDelegate.swift in Sources */,
 				A74E0F8322A369F300D80C91 /* EnumFile.swift in Sources */,
 				A74E0F7022A3691400D80C91 /* SliderMenuLoader.swift in Sources */,
+				A79A76F322A38B6F00A17237 /* UpdatedLocationInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -47,13 +47,6 @@ class MapViewController2: BaseMapViewController {
 // MARK: - major functions for controller
 extension MapViewController2 {
     
-    private func prepareViewControllerConfigurations() {
-        addMapView()
-        addRefreshingView()
-        addListeners()
-        addSliderMenu()
-    }
-    
     private func addMapView() {
         self.view.addSubview(mapView)
         
@@ -92,7 +85,6 @@ extension MapViewController2 {
                 self.refreshingViewDisplayManager(active: false)
                 self.feedDataToMapView()
                 self.updateSlideMenuData()
-                self.resetTimer()
             default:
                 break
             }
@@ -109,6 +101,11 @@ extension MapViewController2 {
             default:
                 break
             }
+        }
+        
+        // annotation selected listener
+        viewModel.pathStruct.bind { (pathStructData) in
+            self.triggerUpdatedLocationViewController(data: pathStructData)
         }
     }
     
@@ -148,7 +145,7 @@ extension MapViewController2 {
             if active {
                 self.runTimer()
             } else {
-                self.timer?.invalidate()
+                self.resetTimer()
             }
         }
         
@@ -156,10 +153,8 @@ extension MapViewController2 {
     
     @objc fileprivate func triggerRefreshData() {
         print("second : \(second)")
-        
         second += 1
-        
-        if second % 10 == 0 {
+        if second % 100 == 0 {
             self.resetTimer()
             viewModel.getStatesData(openSkyNetworkRequestStruct: getCurrentVisibleRectSkyNetworkRequestStruct())
         }
@@ -170,10 +165,10 @@ extension MapViewController2 {
         self.timerActivation(active: false)
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.resetTimer()
-        self.timerActivation(active: true)
-    }
+//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        self.resetTimer()
+//        self.timerActivation(active: true)
+//    }
     
     private func arrangeMapZoomRateAfterLoaded() {
         LocationManager.shared.getCurrentLocationData { (location) in
@@ -184,12 +179,8 @@ extension MapViewController2 {
     }
     
     private func createOpenSkyNetworkRequestStruct(highestNorthCorner: CLLocationCoordinate2D, lowestSouthCorner: CLLocationCoordinate2D) -> OpenSkyNetworkRequestStruct {
-        
         let openSkyNetworkRequestStruct = OpenSkyNetworkRequestStruct(callType: .stateVectorsAll, urlString: CONSTANT.OPEN_SKY_KEYS.URLS.stateAll, lomin: String(describing: highestNorthCorner.longitude), lamin: String(describing: lowestSouthCorner.latitude), lomax: String(describing: lowestSouthCorner.longitude), lamax: String(describing: highestNorthCorner.latitude))
-        print("openSkyNetworkRequestStruct : \(openSkyNetworkRequestStruct)")
-        
         return openSkyNetworkRequestStruct
-        
     }
     
     private func removeAnnotationsOnMap() {
@@ -201,7 +192,7 @@ extension MapViewController2 {
     }
     
     // caller from outside
-    func addAnnotations(data: Array<CommonPlaceData>) {
+    private func addAnnotations(data: Array<CommonPlaceData>) {
         //        mapViewModel.annotationData.value = data
         print("\(#function)")
         
@@ -231,6 +222,24 @@ extension MapViewController2 {
         return createOpenSkyNetworkRequestStruct(highestNorthCorner: mapView.northWestCoordinate, lowestSouthCorner: mapView.southEastCoordinate)
     }
     
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
+    }
+    
+    private func triggerUpdatedLocationViewController(data: PathStruct) {
+        DispatchQueue.main.async {
+            
+            let updatedLocationViewController = UpdatedLocationInfoViewController(pathStructData: data)
+            let navigationController = UINavigationController(rootViewController: updatedLocationViewController)
+            navigationController.modalPresentationStyle = .overCurrentContext
+            navigationController.modalTransitionStyle = .crossDissolve
+            self.present(navigationController, animated: true, completion: nil)
+            
+            
+        }
+    }
+    
 }
 
 
@@ -242,9 +251,7 @@ extension MapViewController2: MKMapViewDelegate {
         viewModel.getStatesData(openSkyNetworkRequestStruct: createOpenSkyNetworkRequestStruct(highestNorthCorner: mapView.northWestCoordinate, lowestSouthCorner: mapView.southEastCoordinate))
     }
     
-    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        print("TAKATAKA")
         guard !annotation.isKind(of: MKUserLocation.self) else {
             // Make a fast exit if the annotation is the `MKUserLocation`, as it's not an annotation view we wish to customize.
             return nil
@@ -253,8 +260,8 @@ extension MapViewController2: MKMapViewDelegate {
         guard let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: PlaneAnnotationView.identifier) as? PlaneAnnotationView else { return nil }
         
         annotationView.delegate = self
-        //        annotationView.frame.size.height = 50
-        //        annotationView.frame.size.width = 50
+//        annotationView.frame.size.height = 50
+//        annotationView.frame.size.width = 50
         
         return annotationView
         
@@ -265,8 +272,10 @@ extension MapViewController2: MKMapViewDelegate {
 // MARK: - MapViewProtocols
 extension MapViewController2: MapViewProtocols {
     func planeAnnotationSelected(data: CommonPlaceData) {
-        print("planeAnnotationSelected start")
-        //print("ICAO24 : \(data.icao24)")
+        guard let stateData = data as? StateData else { return }
+        print("icao24 : \(stateData.icao24)")
+        
+        viewModel.getStatesData(openSkyNetworkRequestStruct: OpenSkyNetworkRequestStruct(callType: .updatedLocationValue, urlString: CONSTANT.OPEN_SKY_KEYS.URLS.updatedLocation, ica024: stateData.icao24, time: "0"))
     }
 }
 
@@ -277,10 +286,14 @@ extension MapViewController2: SlideMenuProtocols {
         guard let filteredData = viewModel.returnFilteredStateData(selectedCountry: country) else { return }
         self.resetTimer()
         self.timerActivation(active: true)
-        SlideMenuLoader.shared.animateSlideMenu(active: false)
+
+        delay(1) {
+            SlideMenuLoader.shared.animateSlideMenu(active: false)
+        }
+        
+        SlideMenuLoader.shared.updateFlightCount(count: filteredData.count)
         addAnnotations(data: filteredData)
     }
-    
     
 }
 

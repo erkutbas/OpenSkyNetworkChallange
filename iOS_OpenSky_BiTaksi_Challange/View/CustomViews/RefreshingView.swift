@@ -35,8 +35,8 @@ class RefreshingView: BaseView {
             
             activityAnimation.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             activityAnimation.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            activityAnimation.heightAnchor.constraint(equalToConstant: 100),
-            activityAnimation.widthAnchor.constraint(equalToConstant: 100),
+            activityAnimation.heightAnchor.constraint(equalToConstant: 80),
+            activityAnimation.widthAnchor.constraint(equalToConstant: 80),
             
             ])
         

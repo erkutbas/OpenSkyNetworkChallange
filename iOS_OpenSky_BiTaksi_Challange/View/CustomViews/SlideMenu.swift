@@ -243,7 +243,11 @@ class SlideMenu: BaseView {
     }
     
     func updateFlightCount(count: Int) {
-        
+        DispatchQueue.main.async {
+            UIView.transition(with: self.fligthCount, duration: 0.5, options: .transitionCrossDissolve, animations: {
+                self.fligthCount.text = String(describing: count)
+            })
+        }
     }
     
     func setDelegation(delegate: SlideMenuProtocols) {

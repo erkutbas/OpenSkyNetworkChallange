@@ -25,6 +25,7 @@ struct CONSTANT {
     struct OPEN_SKY_KEYS {
         struct URLS {
             static var stateAll : String = "https://Q2FTZTAy:fXUXaJ987hnSu8B@opensky-network.org/api/states/all?"
+            static var updatedLocation : String = "https://Q2FTZTAy:fXUXaJ987hnSu8B@opensky-network.org/api/tracks/all?"
         }
     }
     
