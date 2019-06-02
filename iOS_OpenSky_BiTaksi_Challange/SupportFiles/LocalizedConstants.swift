@@ -1,6 +1,6 @@
 //
 //  LocalizedConstants.swift
-//  OpenSkyNetworkChallange
+//  iOS_OpenSky_BiTaksi_Challange
 //
 //  Created by Erkut Baş on 5/30/19.
 //  Copyright © 2019 Erkut Baş. All rights reserved.
@@ -32,6 +32,6 @@ struct LocalizedConstants {
         static let simulatePrompt = NSLocalizedString("simulatePrompt", comment: "")
         static let finishPrompt = NSLocalizedString("finishPrompt", comment: "")
         static let simulationScreen = NSLocalizedString("simulationScreen", comment: "")
-        
+        static let brokenData = NSLocalizedString("brokenData", comment: "")
     }
 }

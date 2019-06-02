@@ -40,4 +40,8 @@ class SimulationViewModel {
         
     }
     
+    func returnSimulationIsFinished() -> Bool {
+        return simulationFinished.value
+    }
+    
 }

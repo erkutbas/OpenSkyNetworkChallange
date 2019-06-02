@@ -24,4 +24,5 @@
 "simulatePrompt" = "Simulate";
 "finishPrompt" = "Finish";
 "simulationScreen" = "Simulation Screen";
+"brokenData" = "Invalid, expired data.Please try again.";
 

@@ -51,6 +51,9 @@
 		A79A76F722A3919400A17237 /* dots.png in Resources */ = {isa = PBXBuildFile; fileRef = A79A76F522A3919400A17237 /* dots.png */; };
 		A79A76F922A3BA1000A17237 /* SimulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A76F822A3BA1000A17237 /* SimulationViewController.swift */; };
 		A79A76FC22A3C1A000A17237 /* SimulationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A76FB22A3C1A000A17237 /* SimulationViewModel.swift */; };
+		A79A76FE22A3F3B000A17237 /* AlertViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A76FD22A3F3B000A17237 /* AlertViewManager.swift */; };
+		A79A770022A3F47800A17237 /* LoaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A76FF22A3F47800A17237 /* LoaderController.swift */; };
+		A79A770222A3F5A100A17237 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79A770122A3F5A100A17237 /* ErrorView.swift */; };
 		E5B4AD9DFDFE247755CE4F06 /* Pods_iOS_OpenSky_BiTaksi_Challange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EBF96983721E0B5BA520BB6 /* Pods_iOS_OpenSky_BiTaksi_Challange.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +108,9 @@
 		A79A76F522A3919400A17237 /* dots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dots.png; sourceTree = "<group>"; };
 		A79A76F822A3BA1000A17237 /* SimulationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationViewController.swift; sourceTree = "<group>"; };
 		A79A76FB22A3C1A000A17237 /* SimulationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationViewModel.swift; sourceTree = "<group>"; };
+		A79A76FD22A3F3B000A17237 /* AlertViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewManager.swift; sourceTree = "<group>"; };
+		A79A76FF22A3F47800A17237 /* LoaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderController.swift; sourceTree = "<group>"; };
+		A79A770122A3F5A100A17237 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		B20137907D098718C445E3F1 /* Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_OpenSky_BiTaksi_Challange/Pods-iOS_OpenSky_BiTaksi_Challange.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,6 +203,8 @@
 				A74E0F7122A3693600D80C91 /* OpenSkyNetworkManager.swift */,
 				A74E0F7322A3694900D80C91 /* PermissionManager.swift */,
 				A74E0F7522A3695F00D80C91 /* LocationManager.swift */,
+				A79A76FD22A3F3B000A17237 /* AlertViewManager.swift */,
+				A79A76FF22A3F47800A17237 /* LoaderController.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -245,6 +253,7 @@
 				A74E0F9222A36A4600D80C91 /* PlaneClusterAnnotation.swift */,
 				A74E0F9322A36A4600D80C91 /* MapView.swift */,
 				A74E0F9422A36A4600D80C91 /* SlideMenu.swift */,
+				A79A770122A3F5A100A17237 /* ErrorView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -411,11 +420,13 @@
 				A79A76F022A37F5300A17237 /* PathData.swift in Sources */,
 				A74E0F7F22A369C200D80C91 /* PlanePointAnnotation.swift in Sources */,
 				A74E0FA422A36A5900D80C91 /* MapViewModel.swift in Sources */,
+				A79A770022A3F47800A17237 /* LoaderController.swift in Sources */,
 				A74E0F8122A369DD00D80C91 /* Structs.swift in Sources */,
 				A74E0F9D22A36A4600D80C91 /* SlideMenu.swift in Sources */,
 				A74E0F7422A3694900D80C91 /* PermissionManager.swift in Sources */,
 				A74E0F9C22A36A4600D80C91 /* MapView.swift in Sources */,
 				A74E0F9822A36A4600D80C91 /* PermissionButtonView.swift in Sources */,
+				A79A76FE22A3F3B000A17237 /* AlertViewManager.swift in Sources */,
 				A74E0F8B22A36A2A00D80C91 /* StateData.swift in Sources */,
 				A79A76EE22A37F4100A17237 /* OpenSkyUpdatedLocationData.swift in Sources */,
 				A74E0F7E22A369C200D80C91 /* Dynamic.swift in Sources */,
@@ -424,6 +435,7 @@
 				A74E0F8622A36A0300D80C91 /* Constants.swift in Sources */,
 				A79A76F922A3BA1000A17237 /* SimulationViewController.swift in Sources */,
 				A74E0FA622A36A5900D80C91 /* SlideMenuViewModel.swift in Sources */,
+				A79A770222A3F5A100A17237 /* ErrorView.swift in Sources */,
 				A74E0F9A22A36A4600D80C91 /* RefreshingView.swift in Sources */,
 				A74E0F7622A3695F00D80C91 /* LocationManager.swift in Sources */,
 				A79A76E722A370CA00A17237 /* MapViewController2.swift in Sources */,

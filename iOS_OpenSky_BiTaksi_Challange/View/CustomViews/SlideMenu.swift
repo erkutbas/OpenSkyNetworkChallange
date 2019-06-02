@@ -1,6 +1,6 @@
 //
 //  SlideMenu.swift
-//  OpenSkyNetworkChallange
+//  iOS_OpenSky_BiTaksi_Challange
 //
 //  Created by Erkut Baş on 6/1/19.
 //  Copyright © 2019 Erkut Baş. All rights reserved.
@@ -130,7 +130,7 @@ class SlideMenu: BaseView {
         label.contentMode = .center
         //label.lineBreakMode = .byWordWrapping
         //label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "50"
+        label.text = "0"
         //label.font = UIFont(name: "Avenier-Medium", size: 48)
         label.font = UIFont(name: "Avenir-Medium", size: 30)
         label.textColor = #colorLiteral(red: 0.2392156863, green: 0.2588235294, blue: 0.3333333333, alpha: 1)

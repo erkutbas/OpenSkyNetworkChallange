@@ -127,6 +127,8 @@ extension UpdatedLocationInfoViewController {
         
         guard let simulationData = returnSimulationInputs() else { return }
         
+        //self.cancelButton.text = LocalizedConstants.TitlePrompts.finishPrompt
+        
         let simulationViewController = SimulationViewController(data: simulationData)
         self.navigationController?.pushViewController(simulationViewController, animated: true)
     }

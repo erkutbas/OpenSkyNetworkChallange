@@ -21,6 +21,18 @@ class SimulationViewController: BaseMapViewController {
         return temp
     }()
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        print("self.isMovingFromParent: \(self.isMovingFromParent)")
+        print("self.isMovingToParent: \(self.isMovingToParent)")
+        
+        if (self.isMovingFromParent) {
+            self.timer?.invalidate()
+            self.simulationViewModel.simulationFinished.value = true
+        }
+    }
+    
     convenience init(data: SimulationInputs) {
         self.init()
         
@@ -91,7 +103,7 @@ extension SimulationViewController {
         guard let coordinate = createCoordinate(path: path) else { return }
         points.append(coordinate)
         
-        var polyLine = MKPolyline(coordinates: points, count: points.count)
+        let polyLine = MKPolyline(coordinates: points, count: points.count)
         self.mapView.addOverlay(polyLine)
     }
     
@@ -124,29 +136,32 @@ extension SimulationViewController {
     
     private func startSimulationProcess(fromIndex index: Int = 0) {
         
-        guard let paths = self.simulationViewModel.returnPaths() else { return }
-        guard index < paths.count else {
-            //timer?.invalidate()
-            self.simulationViewModel.simulationFinished.value = true
-            return
-        }
-        
-        DispatchQueue.main.async {
-            for annotation in self.mapView.annotations {
-                if let annotation = annotation as? PlanePointAnnotation {
-                    UIView.animate(withDuration: 0.4, animations: {
-                        guard let coordinate = self.createCoordinate(path: paths[index]) else { return }
-                        annotation.coordinate = coordinate
-                        self.changeMapViewRegion(path: paths[index])
-                        self.addPolyLine(path: paths[index])
-                    })
+        if !simulationViewModel.returnSimulationIsFinished() {
+            guard let paths = self.simulationViewModel.returnPaths() else { return }
+            guard index < paths.count else {
+                //timer?.invalidate()
+                self.simulationViewModel.simulationFinished.value = true
+                return
+            }
+            
+            DispatchQueue.main.async {
+                for annotation in self.mapView.annotations {
+                    if let annotation = annotation as? PlanePointAnnotation {
+                        UIView.animate(withDuration: 0.4, animations: {
+                            guard let coordinate = self.createCoordinate(path: paths[index]) else { return }
+                            annotation.coordinate = coordinate
+                            self.changeMapViewRegion(path: paths[index])
+                            //self.addPolyLine(path: paths[index])
+                        })
+                    }
                 }
+            }
+            
+            Timer.scheduledTimer(withTimeInterval: TimeInterval(self.simulationViewModel.returnSimulationTime()), repeats: false) { _ in
+                self.startSimulationProcess(fromIndex: index+1)
             }
         }
         
-        Timer.scheduledTimer(withTimeInterval: TimeInterval(self.simulationViewModel.returnSimulationTime()), repeats: false) { _ in
-            self.startSimulationProcess(fromIndex: index+1)
-        }
     }
     
     private func createLocation(path: PathData) -> CLLocation? {
@@ -191,6 +206,8 @@ extension SimulationViewController {
     
     @objc fileprivate func refreshTriggered(_ sender: UIBarButtonItem) {
         print("\(#function)")
+        self.timer?.invalidate()
+        self.refreshButtonActivationManager(finish: false)
         self.removePolyLines()
         self.refreshingView.activationManager(active: true)
         self.startSimulationProcess()
@@ -215,19 +232,18 @@ extension SimulationViewController: MKMapViewDelegate {
         return annotationView
     }
     
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        if overlay is MKPolyline {
-            var polylineRenderer = MKPolylineRenderer(overlay: overlay)
-            polylineRenderer.strokeColor = #colorLiteral(red: 1, green: 0.3098039216, blue: 0.6039215686, alpha: 1)
-            polylineRenderer.lineWidth = 2
-            polylineRenderer.lineCap = .round
-            polylineRenderer.lineJoin = .bevel
-            return polylineRenderer
-        }
-        
-        return MKOverlayRenderer()
-        
-    }
+//    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer! {
+//        if overlay is MKPolyline {
+//            var polylineRenderer = MKPolylineRenderer(overlay: overlay)
+//            polylineRenderer.strokeColor = #colorLiteral(red: 1, green: 0.3098039216, blue: 0.6039215686, alpha: 1)
+//            polylineRenderer.lineWidth = 2
+//            polylineRenderer.lineCap = .round
+//            polylineRenderer.lineJoin = .round
+//            return polylineRenderer
+//        }
+//
+//        return nil
+//    }
     
 }
 

@@ -1,6 +1,6 @@
 //
 //  MapViewControllerViewModel.swift
-//  OpenSkyNetworkChallange
+//  iOS_OpenSky_BiTaksi_Challange
 //
 //  Created by Erkut Baş on 5/31/19.
 //  Copyright © 2019 Erkut Baş. All rights reserved.
@@ -14,6 +14,7 @@ class MapViewControllerViewModel: CommonViewModel {
     var statesList = Array<CommonPlaceData>()
     var timerTriggerState = Dynamic(TimerControl.none)
     var pathStruct = Dynamic(PathStruct())
+    var errorOccured = Dynamic(false)
     
     /// Description: start a url request to get data from OpenSky Network API
     ///
@@ -49,8 +50,9 @@ class MapViewControllerViewModel: CommonViewModel {
         switch response {
         case .failure(let error):
             print("Error : \(error)")
-            
+            errorOccured.value = true
         case .success(let data):
+            errorOccured.value = false
             if let data = data as? OpenSkyNetworkData {
                 print("OpenSkyNetworkData retrieved")
                 self.handleOpenSkyStateData(data: data)

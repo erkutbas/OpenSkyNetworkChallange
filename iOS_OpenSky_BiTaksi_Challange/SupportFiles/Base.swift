@@ -1,6 +1,6 @@
 //
 //  Base.swift
-//  OpenSkyNetworkChallange
+//  iOS_OpenSky_BiTaksi_Challange
 //
 //  Created by Erkut Baş on 5/31/19.
 //  Copyright © 2019 Erkut Baş. All rights reserved.
@@ -62,7 +62,8 @@ class CenterTemplateViewControler: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.isNavigationBarHidden = false
-        //self.leftDetailedInformation.text = LocalizedConstants.TitlePrompts.finishPrompt
+        self.cancelButton.setTitle(LocalizedConstants.TitlePrompts.finishPrompt, for: .normal)
+        
     }
     
     lazy var centerViewContainer: UIView = {
@@ -121,7 +122,7 @@ class CenterTemplateViewControler: UIViewController {
         label.text = LocalizedConstants.TitlePrompts.startTime
         //label.font = UIFont(name: "Avenier-Medium", size: 48)
         label.font = UIFont(name: "Avenir-Medium", size: 18)
-        label.textColor = #colorLiteral(red: 0.1647058824, green: 0.1803921569, blue: 0.262745098, alpha: 1)
+        label.textColor = #colorLiteral(red: 0.2705882353, green: 0.3098039216, blue: 0.3882352941, alpha: 1)
         
         return label
     }()
@@ -136,7 +137,7 @@ class CenterTemplateViewControler: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "00:00"
         label.font = UIFont(name: "Avenir-Heavy", size: 30)
-        label.textColor = #colorLiteral(red: 0.1647058824, green: 0.1803921569, blue: 0.262745098, alpha: 1).withAlphaComponent(0.8)
+        label.textColor = #colorLiteral(red: 0.1647058824, green: 0.1803921569, blue: 0.262745098, alpha: 1)
         
         return label
     }()
@@ -165,7 +166,7 @@ class CenterTemplateViewControler: UIViewController {
         label.text = LocalizedConstants.TitlePrompts.endTime
         //label.font = UIFont(name: "Avenier-Medium", size: 48)
         label.font = UIFont(name: "Avenir-Medium", size: 18)
-        label.textColor = #colorLiteral(red: 0.1647058824, green: 0.1803921569, blue: 0.262745098, alpha: 1).withAlphaComponent(0.8)
+        label.textColor = #colorLiteral(red: 0.2705882353, green: 0.3098039216, blue: 0.3882352941, alpha: 1)
         
         return label
     }()
@@ -209,7 +210,7 @@ class CenterTemplateViewControler: UIViewController {
         label.text = LocalizedConstants.TitlePrompts.icao24Info
         //label.font = UIFont(name: "Avenier-Medium", size: 48)
         label.font = UIFont(name: "Avenir-Medium", size: 18)
-        label.textColor = #colorLiteral(red: 0.1647058824, green: 0.1803921569, blue: 0.262745098, alpha: 1).withAlphaComponent(0.8)
+        label.textColor = #colorLiteral(red: 0.2705882353, green: 0.3098039216, blue: 0.3882352941, alpha: 1)
         
         return label
     }()
@@ -233,7 +234,7 @@ class CenterTemplateViewControler: UIViewController {
         let temp = UISlider()
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.isUserInteractionEnabled = true
-        temp.thumbTintColor = #colorLiteral(red: 0.1647058824, green: 0.1803921569, blue: 0.262745098, alpha: 1)
+        temp.thumbTintColor = #colorLiteral(red: 0.2705882353, green: 0.3098039216, blue: 0.3882352941, alpha: 1)
         temp.minimumTrackTintColor = #colorLiteral(red: 0.4066316783, green: 0.3673116565, blue: 1, alpha: 1)
         temp.minimumValue = 0
         temp.maximumValue = 60
@@ -253,7 +254,55 @@ class CenterTemplateViewControler: UIViewController {
         label.text = LocalizedConstants.TitlePrompts.simulatorSpeed
         //label.font = UIFont(name: "Avenier-Medium", size: 48)
         label.font = UIFont(name: "Avenir-Medium", size: 14)
-        label.textColor = #colorLiteral(red: 0.1647058824, green: 0.1803921569, blue: 0.262745098, alpha: 1).withAlphaComponent(0.5)
+        label.textColor = #colorLiteral(red: 0.4705882353, green: 0.5176470588, blue: 0.6196078431, alpha: 1)
+        
+        return label
+    }()
+    
+    let sliderRangeLeft: UILabel = {
+        let label = UILabel()
+        //label.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.contentMode = .center
+        label.lineBreakMode = .byWordWrapping
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "0"
+        //label.font = UIFont(name: "Avenier-Medium", size: 48)
+        label.font = UIFont(name: "Avenir-Light", size: 12)
+        label.textColor = #colorLiteral(red: 0.4705882353, green: 0.5176470588, blue: 0.6196078431, alpha: 1)
+        
+        return label
+    }()
+    
+    let sliderRangeMiddle: UILabel = {
+        let label = UILabel()
+        //label.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.contentMode = .center
+        label.lineBreakMode = .byWordWrapping
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "30"
+        //label.font = UIFont(name: "Avenier-Medium", size: 48)
+        label.font = UIFont(name: "Avenir-Light", size: 12)
+        label.textColor = #colorLiteral(red: 0.4705882353, green: 0.5176470588, blue: 0.6196078431, alpha: 1)
+        
+        return label
+    }()
+    
+    let sliderRangeRight: UILabel = {
+        let label = UILabel()
+        //label.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        label.contentMode = .center
+        label.lineBreakMode = .byWordWrapping
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "60"
+        //label.font = UIFont(name: "Avenier-Medium", size: 48)
+        label.font = UIFont(name: "Avenir-Light", size: 12)
+        label.textColor = #colorLiteral(red: 0.4705882353, green: 0.5176470588, blue: 0.6196078431, alpha: 1)
         
         return label
     }()
@@ -278,7 +327,7 @@ class CenterTemplateViewControler: UIViewController {
         temp.setTitle(LocalizedConstants.TitlePrompts.cancelPrompt, for: .normal)
         temp.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         temp.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
-        temp.backgroundColor = #colorLiteral(red: 0.2666666667, green: 0.3098039216, blue: 0.3882352941, alpha: 1)
+        temp.backgroundColor = #colorLiteral(red: 0.2705882353, green: 0.3098039216, blue: 0.3882352941, alpha: 1)
         temp.contentVerticalAlignment = .center
         temp.contentHorizontalAlignment = .center
         temp.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
@@ -335,6 +384,9 @@ class CenterTemplateViewControler: UIViewController {
         self.centerViewContainer.addSubview(sliderTitle)
         self.centerViewContainer.addSubview(rangeSlider)
         self.centerViewContainer.addSubview(operationButtonsStackView)
+        self.centerViewContainer.addSubview(sliderRangeRight)
+        self.centerViewContainer.addSubview(sliderRangeLeft)
+        self.centerViewContainer.addSubview(sliderRangeMiddle)
         
         NSLayoutConstraint.activate([
             
@@ -362,7 +414,7 @@ class CenterTemplateViewControler: UIViewController {
             
             operationButtonsStackView.leadingAnchor.constraint(equalTo: self.centerViewContainer.leadingAnchor, constant: 10),
             operationButtonsStackView.trailingAnchor.constraint(equalTo: self.centerViewContainer.trailingAnchor, constant: -10),
-            operationButtonsStackView.bottomAnchor.constraint(equalTo: self.centerViewContainer.bottomAnchor, constant: -10),
+            operationButtonsStackView.bottomAnchor.constraint(equalTo: self.centerViewContainer.bottomAnchor, constant: -15),
             
             rangeSlider.leadingAnchor.constraint(equalTo: self.centerViewContainer.leadingAnchor, constant: 10),
             rangeSlider.trailingAnchor.constraint(equalTo: self.centerViewContainer.trailingAnchor, constant: -10),
@@ -370,6 +422,15 @@ class CenterTemplateViewControler: UIViewController {
             
             sliderTitle.centerXAnchor.constraint(equalTo: self.centerViewContainer.centerXAnchor),
             sliderTitle.bottomAnchor.constraint(equalTo: self.rangeSlider.topAnchor, constant: -10),
+            
+            sliderRangeMiddle.centerXAnchor.constraint(equalTo: self.centerViewContainer.centerXAnchor),
+            sliderRangeMiddle.bottomAnchor.constraint(equalTo: self.rangeSlider.topAnchor, constant: 3),
+            
+            sliderRangeLeft.leadingAnchor.constraint(equalTo: self.centerViewContainer.leadingAnchor, constant: 20),
+            sliderRangeLeft.bottomAnchor.constraint(equalTo: self.rangeSlider.topAnchor, constant: 3),
+            
+            sliderRangeRight.trailingAnchor.constraint(equalTo: self.centerViewContainer.trailingAnchor, constant: -20),
+            sliderRangeRight.bottomAnchor.constraint(equalTo: self.rangeSlider.topAnchor, constant: 3),
             
             ])
         

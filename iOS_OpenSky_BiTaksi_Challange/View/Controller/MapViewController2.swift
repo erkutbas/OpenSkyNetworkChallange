@@ -28,6 +28,8 @@ class MapViewController2: BaseMapViewController {
     deinit {
         viewModel.statesListener.unbind()
         viewModel.timerTriggerState.unbind()
+        viewModel.errorOccured.unbind()
+        viewModel.pathStruct.unbind()
     }
     
     override func prepareViewConfigurations() {
@@ -79,6 +81,19 @@ extension MapViewController2 {
         // annotation selected listener
         viewModel.pathStruct.bind { (pathStructData) in
             self.triggerUpdatedLocationViewController(data: pathStructData)
+        }
+        
+        // error handling
+        viewModel.errorOccured.bind { (errorOccured) in
+            self.triggerAlertView(errorOccured: errorOccured)
+        }
+    }
+    
+    private func triggerAlertView(errorOccured: Bool) {
+        if errorOccured {
+            DispatchQueue.main.async {
+                AlertViewManager.show(type: .error, placement: .top, body: LocalizedConstants.TitlePrompts.brokenData)
+            }
         }
     }
     

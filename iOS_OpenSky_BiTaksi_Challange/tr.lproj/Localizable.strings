@@ -24,4 +24,5 @@
 "simulatePrompt" = "Başla";
 "finishPrompt" = "Bitir";
 "simulationScreen" = "Simulasyon Ekranı";
+"brokenData" = "Geçersiz data, yeniden deneyiniz.";
 
