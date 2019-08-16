@@ -296,7 +296,7 @@
 				A74E0F4422A3688600D80C91 /* Sources */,
 				A74E0F4522A3688600D80C91 /* Frameworks */,
 				A74E0F4622A3688600D80C91 /* Resources */,
-				451D0FC79B430CDE6DFB1447 /* [CP] Embed Pods Frameworks */,
+				63B8B10BAF7D1EC630AB976F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -364,22 +364,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		451D0FC79B430CDE6DFB1447 /* [CP] Embed Pods Frameworks */ = {
+		63B8B10BAF7D1EC630AB976F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iOS_OpenSky_BiTaksi_Challange/Pods-iOS_OpenSky_BiTaksi_Challange-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS_OpenSky_BiTaksi_Challange/Pods-iOS_OpenSky_BiTaksi_Challange-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS_OpenSky_BiTaksi_Challange/Pods-iOS_OpenSky_BiTaksi_Challange-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOS_OpenSky_BiTaksi_Challange/Pods-iOS_OpenSky_BiTaksi_Challange-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS_OpenSky_BiTaksi_Challange/Pods-iOS_OpenSky_BiTaksi_Challange-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BE0345461EFA377106F5791B /* [CP] Check Pods Manifest.lock */ = {
