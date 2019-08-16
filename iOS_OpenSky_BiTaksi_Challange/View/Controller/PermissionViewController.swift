@@ -180,6 +180,7 @@ extension PermissionViewController {
     fileprivate func changeBackgroundcolor() {
         //self.view.backgroundColor = #colorLiteral(red: 0.1647058824, green: 0.1803921569, blue: 0.262745098, alpha: 1)
         self.view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        print("do do")
     }
     
     fileprivate func addViews() {
